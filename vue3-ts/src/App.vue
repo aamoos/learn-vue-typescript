@@ -1,29 +1,18 @@
 <template>
-  <div>{{ str }}</div>
+  <div>
+
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+  import Vue from 'vue';
+  import Chart from 'chart.js';
 
-export default defineComponent({
-  // setup() {
-  //   const str = ref("");
-
-  //   str.value = "hi";
-
-  //   return { str };
-  // },
-  data() {
-    return {
-      str: "",
-    };
-  },
-  methods: {
-    changeString() {
-      this.str = "hi";
-    },
-  },
-});
+  export default Vue.extend({
+    new Chart();
+  })
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>
