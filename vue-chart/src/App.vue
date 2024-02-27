@@ -7,9 +7,14 @@
 <script lang="ts">
 import Vue from "vue";
 import { ChartConfiguration } from "chart.js";
-import Chart from "chart.js/auto";
+// import Chart from "chart.js/auto";
 
 export default Vue.extend({
+  methods: {
+    sayHi() {
+      const canvasElement = this.$refs.myChart as HTMLCanvasElement;
+    },
+  },
   mounted() {
     const labels = ["January", "February", "March", "April", "May", "June"];
     const data = {
@@ -31,7 +36,7 @@ export default Vue.extend({
     const ctx = (
       document.getElementById("myChart") as HTMLCanvasElement
     ).getContext("2d") as CanvasRenderingContext2D;
-    var myChart = new Chart(ctx, config);
+    var myChart = new this.$_Chart(ctx, config);
   },
 });
 </script>
