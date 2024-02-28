@@ -5,12 +5,27 @@
 </template>
 
 <script lang="ts">
-  import Vue from 'vue';
-  import Chart from 'chart.js';
+import { defineComponent, ref } from 'vue';
 
-  export default Vue.extend({
-    new Chart();
-  })
+export default defineComponent({
+  // setup(){
+  //   const str = ref('')
+
+  //   str.value = 'hi'
+
+  //   return { str }
+  // },
+  data() {
+    return {
+      str: ""
+    }
+  },
+  methods: {
+    changeString(){
+      this.str = "hi";
+    }
+  }
+})
 </script>
 
 <style scoped>
